@@ -6,8 +6,8 @@ function setup() {
   zenia.shapeColor = "white";
   zenia.velocityX = 10;
   zenia.debug = true;
-  zeniaSpeed = RandomSource(20,200);
-  zeniaWeight = RandomSource(2000,2200);
+  zeniaSpeed = 60;
+  zeniaWeight = 2260;
   tourus = createSprite(100,200,50,50);
   tourus.shapeColor = "white";
   cyclap = createSprite(100,300,50,50);
@@ -18,15 +18,15 @@ function setup() {
   wall2.shapeColor = "black";
   wall3 = createSprite(1200,300,30,75);
   wall3.shapeColor = "black";
-  wall3,debug = true;
 }
 
 function draw() {
   background(80,80,80); 
   
-  if(zenia.x-wall1.x<=(zenia.witdh/2+wall1.witdh/2)){
+  if(zenia.x-wall1.x<=(zenia.width/2+wall1.width/2)&&wall1.x-zenia.x<=(zenia.width/2+wall1.width/2)){
 
     zeniaDeform = 0.5*zeniaWeight*zeniaSpeed*zeniaSpeed/22500;
+    zenia.velocityX = 0;
 
   }
 
