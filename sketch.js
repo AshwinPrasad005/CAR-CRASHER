@@ -28,8 +28,6 @@ function draw() {
     zeniaDeform = 0.5*zeniaWeight*zeniaSpeed*zeniaSpeed/22500;
     zenia.velocityX = 0;
 
-  }
-
   if(zeniaDeform >= 80){
 
     zenia.shapeColor = "green";
@@ -49,4 +47,6 @@ function draw() {
   }
 
   drawSprites();
+  }
 }
+
